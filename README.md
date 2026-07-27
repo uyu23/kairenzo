@@ -4,7 +4,6 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
-![Made%20With-HTML%20%7C%20CSS%20%7C%20JavaScript-black)
 
 ---
 
