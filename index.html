@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairenzo AI | Premium Automation Agency</title>
+    <meta name="description" content="We design and deploy bespoke AI agents, intelligent chatbots, and automated workflows to eliminate manual tasks and scale your business operations.">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+    
+    <!-- SEO & OpenGraph -->
+    <meta property="og:title" content="Kairenzo AI | Premium Automation Agency">
+    <meta property="og:description" content="Transforming businesses with bespoke AI and workflow automation.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Kairenzo AI",
+      "url": "https://kairenzo.com",
+      "description": "Premium AI Automation Agency specializing in AI agents, voice AI, and workflow automation."
+    }
+    </script>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="ambient-bg">
+        <div class="ambient-blob blob-1"></div>
+        <div class="ambient-blob blob-2"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Kairenzo Home">
+                <i data-lucide="cpu" class="text-blue"></i>
+                <span>Kairenzo AI</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#work">Case Studies</a>
+                <a href="#why-us">Why Us</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary nav-cta">Book Consultation</a>
+                <button class="mobile-toggle icon-btn" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#work">Case Studies</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact" class="btn btn-primary w-full text-center mt-4">Book Consultation</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="container relative z-10">
+                <div class="hero-content text-center max-w-4xl mx-auto">
+                    <div class="badge reveal-up">Premium AI Automation Agency</div>
+                    <h1 class="h1 reveal-up mt-6">Automate the impossible.<br>Scale the extraordinary.</h1>
+                    <p class="subtitle reveal-up mt-6">We architect bespoke AI agents, intelligent chatbots, and automated workflows that eliminate manual operations and give your business an unfair advantage.</p>
+                    <div class="hero-btns reveal-up mt-10">
+                        <a href="#contact" class="btn btn-primary btn-lg">Book Free Strategy Call</a>
+                        <a href="#services" class="btn btn-outline btn-lg">Explore Capabilities</a>
+                    </div>
+                </div>
+                
+                <!-- Animated Workflow Illustration -->
+                <div class="workflow-visual mt-24 reveal-up" id="parallax-visual">
+                    <div class="workflow-node glass-card">
+                        <div class="node-icon"><i data-lucide="mail"></i></div>
+                        <span class="node-title">Inbound Lead</span>
+                        <span class="node-sub">Gmail / Web</span>
+                    </div>
+                    <div class="workflow-line">
+                        <div class="line-dot"></div>
+                    </div>
+                    <div class="workflow-node glass-card active-node">
+                        <div class="node-glow"></div>
+                        <div class="node-icon bg-blue text-white"><i data-lucide="cpu"></i></div>
+                        <span class="node-title">AI Agent</span>
+                        <span class="node-sub">Qualification & Processing</span>
+                    </div>
+                    <div class="workflow-line">
+                        <div class="line-dot" style="animation-delay: 1s"></div>
+                    </div>
+                    <div class="workflow-node glass-card">
+                        <div class="node-icon"><i data-lucide="database"></i></div>
+                        <span class="node-title">CRM Update</span>
+                        <span class="node-sub">HubSpot / Salesforce</span>
+                    </div>
+                    <div class="workflow-line hidden-mobile">
+                        <div class="line-dot" style="animation-delay: 1.5s"></div>
+                    </div>
+                    <div class="workflow-node glass-card hidden-mobile">
+                        <div class="node-icon"><i data-lucide="message-square"></i></div>
+                        <span class="node-title">Team Alert</span>
+                        <span class="node-sub">Slack / Teams</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section -->
+        <section class="trusted-by">
+            <div class="container text-center">
+                <p class="text-sm font-semibold text-sec uppercase tracking-wide reveal-up">Trusted by innovative teams worldwide</p>
+            </div>
+            <div class="logos-marquee mt-8 reveal-up">
+                <div class="marquee-track">
+                    <span>AuraLabs</span><span>Nexus</span><span>Quantum</span><span>Vanguard</span><span>Acme Corp</span><span>GlobalScale</span><span>Horizon</span>
+                    <span>AuraLabs</span><span>Nexus</span><span>Quantum</span><span>Vanguard</span><span>Acme Corp</span><span>GlobalScale</span><span>Horizon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header text-center reveal-up max-w-3xl mx-auto">
+                    <h2 class="h2">Enterprise-grade automation.</h2>
+                    <p class="subtitle mt-4">We replace fragmented manual processes with cohesive, intelligent systems tailored to your specific business logic.</p>
+                </div>
+                
+                <div class="grid grid-3 mt-16">
+                    <div class="service-card glass-card reveal-up">
+                        <div class="card-icon"><i data-lucide="bot"></i></div>
+                        <h3 class="h3 mt-6">Custom AI Agents</h3>
+                        <p class="text-sec mt-3">Deploy autonomous LLM-powered agents that execute multi-step workflows, research, and analysis with zero human intervention.</p>
+                    </div>
+                    <div class="service-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="card-icon"><i data-lucide="mic"></i></div>
+                        <h3 class="h3 mt-6">Voice AI Systems</h3>
+                        <p class="text-sec mt-3">Intelligent inbound and outbound conversational voice agents that handle customer support, booking, and lead qualification 24/7.</p>
+                    </div>
+                    <div class="service-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-icon"><i data-lucide="workflow"></i></div>
+                        <h3 class="h3 mt-6">Workflow Automation</h3>
+                        <p class="text-sec mt-3">Seamless integration of your existing SaaS stack using Make and n8n to create robust, error-free automated data pipelines.</p>
+                    </div>
+                    <div class="service-card glass-card reveal-up">
+                        <div class="card-icon"><i data-lucide="message-circle"></i></div>
+                        <h3 class="h3 mt-6">Intelligent Chatbots</h3>
+                        <p class="text-sec mt-3">Context-aware support and sales chatbots trained securely on your proprietary company data and documentation.</p>
+                    </div>
+                    <div class="service-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="card-icon"><i data-lucide="users"></i></div>
+                        <h3 class="h3 mt-6">CRM Automation</h3>
+                        <p class="text-sec mt-3">Automate lead enrichment, personalized outreach sequences, and pipeline management across HubSpot, Salesforce, and more.</p>
+                    </div>
+                    <div class="service-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-icon"><i data-lucide="code"></i></div>
+                        <h3 class="h3 mt-6">Custom Integrations</h3>
+                        <p class="text-sec mt-3">Bespoke middleware and API integrations designed to connect legacy systems with modern AI capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section">
+            <div class="container">
+                <div class="section-header text-center reveal-up max-w-3xl mx-auto">
+                    <h2 class="h2">Our deployment methodology.</h2>
+                    <p class="subtitle mt-4">A deterministic, engineering-first approach to integrating AI securely and effectively into your operations.</p>
+                </div>
+                
+                <div class="grid grid-3 process-grid mt-16">
+                    <div class="process-card reveal-up">
+                        <div class="process-num">01</div>
+                        <h3 class="h3 mt-4">Discovery Audit</h3>
+                        <p class="text-sec mt-2">Deep analysis of your current business processes to map high-ROI automation bottlenecks.</p>
+                    </div>
+                    <div class="process-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="process-num">02</div>
+                        <h3 class="h3 mt-4">Architecture Blueprint</h3>
+                        <p class="text-sec mt-2">Designing a secure, scalable AI and workflow infrastructure tailored specifically to your tech stack.</p>
+                    </div>
+                    <div class="process-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="process-num">03</div>
+                        <h3 class="h3 mt-4">Development</h3>
+                        <p class="text-sec mt-2">Building custom agents, connecting APIs, and integrating systems securely in an isolated environment.</p>
+                    </div>
+                    <div class="process-card reveal-up">
+                        <div class="process-num">04</div>
+                        <h3 class="h3 mt-4">Testing & QA</h3>
+                        <p class="text-sec mt-2">Rigorous edge-case testing to ensure deterministic, hallucination-free outputs before going live.</p>
+                    </div>
+                    <div class="process-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="process-num">05</div>
+                        <h3 class="h3 mt-4">Deployment</h3>
+                        <p class="text-sec mt-2">Seamless rollout to your team with comprehensive training and documentation.</p>
+                    </div>
+                    <div class="process-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="process-num">06</div>
+                        <h3 class="h3 mt-4">Support & Scale</h3>
+                        <p class="text-sec mt-2">Continuous optimization, performance monitoring, and iterative model updates as you grow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Marquee -->
+        <section class="section pt-0">
+            <div class="container text-center mb-8">
+                <h3 class="h3 reveal-up">Powered by industry-leading technology</h3>
+            </div>
+            <div class="tech-marquee reveal-up">
+                <div class="marquee-track tech-track">
+                    <div class="tech-item"><i data-lucide="cpu"></i> OpenAI</div>
+                    <div class="tech-item"><i data-lucide="box"></i> Anthropic</div>
+                    <div class="tech-item"><i data-lucide="hexagon"></i> n8n</div>
+                    <div class="tech-item"><i data-lucide="zap"></i> Zapier</div>
+                    <div class="tech-item"><i data-lucide="code"></i> Make.com</div>
+                    <div class="tech-item"><i data-lucide="database"></i> Airtable</div>
+                    <div class="tech-item"><i data-lucide="message-circle"></i> Slack</div>
+                    <div class="tech-item"><i data-lucide="credit-card"></i> Stripe</div>
+                    
+                    <!-- Duplicated for seamless loop -->
+                    <div class="tech-item"><i data-lucide="cpu"></i> OpenAI</div>
+                    <div class="tech-item"><i data-lucide="box"></i> Anthropic</div>
+                    <div class="tech-item"><i data-lucide="hexagon"></i> n8n</div>
+                    <div class="tech-item"><i data-lucide="zap"></i> Zapier</div>
+                    <div class="tech-item"><i data-lucide="code"></i> Make.com</div>
+                    <div class="tech-item"><i data-lucide="database"></i> Airtable</div>
+                    <div class="tech-item"><i data-lucide="message-circle"></i> Slack</div>
+                    <div class="tech-item"><i data-lucide="credit-card"></i> Stripe</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="work" class="section">
+            <div class="container">
+                <div class="section-header text-center reveal-up max-w-3xl mx-auto">
+                    <h2 class="h2">Proven business impact.</h2>
+                    <p class="subtitle mt-4">See how we transform manual operations into scalable automated systems.</p>
+                </div>
+                
+                <div class="grid grid-2 mt-16">
+                    <!-- Case Study 1 -->
+                    <div class="case-card glass-card reveal-up">
+                        <div class="case-header">
+                            <span class="badge">E-Commerce</span>
+                            <h3 class="h3 mt-4">Automated Customer Support & Returns</h3>
+                        </div>
+                        <div class="case-body mt-4">
+                            <p class="text-sec"><strong>Problem:</strong> Drowning in tier-1 support tickets and manual return processing during peak seasons.</p>
+                            <p class="text-sec mt-3"><strong>Solution:</strong> Deployed an AI agent connected to Shopify and Gorgias to handle returns, order tracking, and FAQs autonomously.</p>
+                            <p class="text-sm text-sec mt-4 font-mono">Tools: Make • OpenAI • Shopify • Gorgias</p>
+                        </div>
+                        <div class="case-metrics mt-6">
+                            <div class="metric">
+                                <span class="metric-val text-blue">-85%</span>
+                                <span class="metric-lbl">Resolution Time</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-val text-blue">24/7</span>
+                                <span class="metric-lbl">Instant Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 2 -->
+                    <div class="case-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="case-header">
+                            <span class="badge">Real Estate</span>
+                            <h3 class="h3 mt-4">AI Voice Agent for Lead Qualification</h3>
+                        </div>
+                        <div class="case-body mt-4">
+                            <p class="text-sec"><strong>Problem:</strong> Sales reps spending 60% of their time calling unqualified leads and playing phone tag.</p>
+                            <p class="text-sec mt-3"><strong>Solution:</strong> Integrated an outbound conversational Voice AI to call, qualify, and directly book appointments on rep calendars.</p>
+                            <p class="text-sm text-sec mt-4 font-mono">Tools: Retell AI • n8n • Calendly • HubSpot</p>
+                        </div>
+                        <div class="case-metrics mt-6">
+                            <div class="metric">
+                                <span class="metric-val text-blue">+40%</span>
+                                <span class="metric-lbl">Qualified Meetings</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-val text-blue">20hrs</span>
+                                <span class="metric-lbl">Saved per Rep/Week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us (Comparison) -->
+        <section id="why-us" class="section">
+            <div class="container">
+                <div class="section-header text-center reveal-up max-w-3xl mx-auto">
+                    <h2 class="h2">The new standard for agencies.</h2>
+                    <p class="subtitle mt-4">We do not bill by the hour. We build systems that deliver measurable ROI.</p>
+                </div>
+                
+                <div class="compare-grid mt-16 reveal-up">
+                    <div class="compare-card traditional glass-card">
+                        <h3 class="h3 text-center mb-8">Traditional Agencies</h3>
+                        <ul class="compare-list">
+                            <li><i data-lucide="x" class="text-sec"></i> Hourly billing model</li>
+                            <li><i data-lucide="x" class="text-sec"></i> Manual, repetitive tasks</li>
+                            <li><i data-lucide="x" class="text-sec"></i> Slow deployment cycles</li>
+                            <li><i data-lucide="x" class="text-sec"></i> Generic software wrappers</li>
+                            <li><i data-lucide="x" class="text-sec"></i> Bloated monthly retainers</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card kairenzo glass-card active-card">
+                        <div class="card-glow"></div>
+                        <h3 class="h3 text-center mb-8 relative z-10">Kairenzo AI</h3>
+                        <ul class="compare-list relative z-10">
+                            <li><i data-lucide="check" class="text-blue"></i> Value & ROI based pricing</li>
+                            <li><i data-lucide="check" class="text-blue"></i> Fully autonomous workflows</li>
+                            <li><i data-lucide="check" class="text-blue"></i> Rapid implementation</li>
+                            <li><i data-lucide="check" class="text-blue"></i> Bespoke AI architecture</li>
+                            <li><i data-lucide="check" class="text-blue"></i> Measurable operational leverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="container">
+                <h2 class="h2 text-center reveal-up mb-16">Client success.</h2>
+                <div class="grid grid-3">
+                    <div class="test-card glass-card reveal-up">
+                        <div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+                        <p class="quote mt-4">"Kairenzo completely modernized our data pipelines. We operate with a fraction of the overhead we had last year. The ROI was apparent in month one."</p>
+                        <div class="author mt-6">
+                            <div class="avatar bg-surface"></div>
+                            <div>
+                                <h4 class="font-semibold text-main">Sarah Jenkins</h4>
+                                <span class="text-sm text-sec">COO, TechFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="test-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+                        <p class="quote mt-4">"Their automated lead qualification system fills our pipeline consistently. It's literally like having an elite SDR team working 24/7 without taking breaks."</p>
+                        <div class="author mt-6">
+                            <div class="avatar bg-surface"></div>
+                            <div>
+                                <h4 class="font-semibold text-main">David Chen</h4>
+                                <span class="text-sm text-sec">VP Sales, Nexus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="test-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+                        <p class="quote mt-4">"The customer support AI agent they built handles 80% of our tier-1 tickets. It integrates perfectly with our existing Shopify store."</p>
+                        <div class="author mt-6">
+                            <div class="avatar bg-surface"></div>
+                            <div>
+                                <h4 class="font-semibold text-main">Elena Rodriguez</h4>
+                                <span class="text-sm text-sec">Founder, Vibe Brands</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <div class="container max-w-3xl mx-auto">
+                <h2 class="h2 text-center reveal-up mb-12">Frequently asked questions.</h2>
+                <div class="faq-list reveal-up">
+                    <div class="faq-item">
+                        <div class="faq-head"><h3 class="h3">What exactly is an AI Automation Agency?</h3><i data-lucide="plus"></i></div>
+                        <div class="faq-body"><p class="text-sec">Unlike traditional marketing or software agencies, we specialize strictly in operational efficiency. We audit your business to find manual, repetitive tasks, and then build custom AI agents and workflow automations to handle them autonomously.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-head"><h3 class="h3">How long does implementation take?</h3><i data-lucide="plus"></i></div>
+                        <div class="faq-body"><p class="text-sec">Most core automation systems and AI agents are deployed within 2 to 4 weeks. Complex enterprise integrations may take up to 6 weeks depending on your proprietary data and legacy infrastructure requirements.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-head"><h3 class="h3">Do we need technical expertise to use this?</h3><i data-lucide="plus"></i></div>
+                        <div class="faq-body"><p class="text-sec">Not at all. We handle the end-to-end architecture, development, deployment, and maintenance. We build intuitive interfaces or integrate directly into the tools you already use (like Slack, Gmail, or HubSpot) so your team can seamlessly interact with the AI.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-head"><h3 class="h3">Is our company data secure?</h3><i data-lucide="plus"></i></div>
+                        <div class="faq-body"><p class="text-sec">Absolutely. We use enterprise-grade APIs with zero-data-retention policies. Your proprietary data is strictly isolated and is never used by providers like OpenAI or Anthropic to train their public foundational models.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section py-cta relative">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-text reveal-up">
+                        <h2 class="h1">Let's automate<br>your business.</h2>
+                        <p class="subtitle mx-0 text-left mt-6 mb-8">Book a free strategy session with our lead architects. We'll audit your current workflows and show you exactly where AI can save you time and generate revenue.</p>
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <i data-lucide="mail" class="text-blue"></i>
+                                <span>hello@kairenzo.com</span>
+                            </div>
+                            <div class="info-item mt-4">
+                                <i data-lucide="clock" class="text-blue"></i>
+                                <span>Free 30-Minute Consultation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form glass-card reveal-up">
+                        <h3 class="h3 mb-6">Request Strategy Call</h3>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" class="input" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Current Process Bottlenecks</label>
+                            <textarea id="message" class="input" rows="4" placeholder="Briefly describe the manual tasks you want to automate..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full btn-lg mt-4">Book Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo text-main inline-flex items-center gap-2 mb-4">
+                        <i data-lucide="cpu" class="text-blue"></i>
+                        <span class="font-bold">Kairenzo AI</span>
+                    </a>
+                    <p class="text-sec text-sm max-w-xs">Premium AI Automation Agency transforming modern businesses with intelligent workflows.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="font-semibold text-main mb-4">Services</h4>
+                    <ul>
+                        <li><a href="#">AI Agents</a></li>
+                        <li><a href="#">Voice AI</a></li>
+                        <li><a href="#">Workflow Automation</a></li>
+                        <li><a href="#">CRM Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="font-semibold text-main mb-4">Company</h4>
+                    <ul>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#work">Case Studies</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4 class="font-semibold text-main mb-4">Stay Updated</h4>
+                    <p class="text-sec text-sm mb-4">Insights on enterprise AI automation.</p>
+                    <div class="flex gap-2">
+                        <input type="email" class="input flex-1 py-2 text-sm" placeholder="Email address" aria-label="Email for newsletter">
+                        <button class="btn btn-primary py-2 px-4 text-sm">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom mt-16 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sec text-sm">&copy; 2026 Kairenzo AI. All rights reserved.</p>
+                <div class="social-links flex gap-4">
+                    <a href="#" aria-label="LinkedIn" class="icon-btn"><i data-lucide="linkedin" size="18"></i></a>
+                    <a href="#" aria-label="Twitter" class="icon-btn"><i data-lucide="twitter" size="18"></i></a>
+                    <a href="#" aria-label="Instagram" class="icon-btn"><i data-lucide="instagram" size="18"></i></a>
+                    <a href="#" aria-label="GitHub" class="icon-btn"><i data-lucide="github" size="18"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
