@@ -1,99 +1,19 @@
-# Kairenzo AI
+# Kairenzo
 
-> Premium AI Automation Agency helping businesses automate workflows, reduce manual work, and scale operations with AI.
+Premium digital growth agency website.
 
-![Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-MIT-blue)
+Kairenzo focuses on:
+- Performance marketing
+- Social media marketing
+- Creative and content
+- Web design and landing pages
+- Lead generation
+- Smart automation
 
----
+## GitHub Pages
+Deploy the `main` branch from `/ (root)`.
 
-## 🚀 About
-
-Kairenzo AI builds intelligent automation systems that help businesses save time, improve efficiency, and grow faster.
-
-We specialize in custom AI solutions powered by modern automation tools and large language models.
-
----
-
-## ✨ Services
-
-- 🤖 AI Automation
-- 💬 AI Chatbots
-- 🎙️ Voice AI Agents
-- 🔄 Workflow Automation
-- ⚡ n8n Automation
-- 🔗 Zapier & Make Integrations
-- 📱 WhatsApp Automation
-- 📊 CRM Automation
-- 📈 Lead Generation Systems
-- 🧠 Custom AI Solutions
-
----
-
-## 🛠 Tech Stack
-
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- OpenAI
-- Claude
-- Gemini
-- n8n
-- Make
-- Zapier
-- Google Workspace
-- Airtable
-- HubSpot
-- Slack
-- Shopify
-
----
-
-## 🌐 Live Website
-
-https://uyu23.github.io/kairenzo/
-
----
-
-## 📂 Project Structure
-
-```text
-kairenzo/
-│
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── logos/
-├── favicon.ico
-├── robots.txt
-├── sitemap.xml
-├── manifest.json
-└── README.md
-```
-
----
-
-## 🎯 Mission
-
-Our mission is to help businesses eliminate repetitive work through intelligent AI automation and scalable workflows.
-
----
-
-## 📬 Contact
-
-📧 hello@kairenzo.com
-
-🌐 https://uyu23.github.io/kairenzo/
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-### Built with ❤️ by Kairenzo AI
+The production site uses:
+- `index.html`
+- `style.css`
+- `script.js`

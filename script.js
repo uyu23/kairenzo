@@ -1,8 +1,8 @@
 // Initialize Icons
-lucide.createIcons();
+if (window.lucide) window.lucide.createIcons();
 
 // Register GSAP Plugin
-gsap.registerPlugin(ScrollTrigger);
+if (window.gsap && window.ScrollTrigger) window.gsap.registerPlugin(window.ScrollTrigger);
 
 // Theme Management
 const themeManager = {
@@ -108,7 +108,7 @@ if (parallaxVisual && window.innerWidth > 768) {
 
 // GSAP Reveal Animations
 const revealElements = document.querySelectorAll('.reveal-up');
-revealElements.forEach(el => {
+if (window.gsap && window.ScrollTrigger) revealElements.forEach(el => {
     gsap.fromTo(el, 
         { y: 30, opacity: 0 },
         {
@@ -123,6 +123,10 @@ revealElements.forEach(el => {
             }
         }
     );
+});
+else revealElements.forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
 });
 
 // FAQ Accordion
