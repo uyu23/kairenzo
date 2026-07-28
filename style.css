@@ -333,3 +333,19 @@ button { font-family: inherit; }
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Personal Kairenzo refinements */
+.eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: var(--blue);
+}
+.linkedin-link {
+  color: var(--text-sec);
+  font-weight: 600;
+}
+.linkedin-link:hover { color: var(--blue); }
+.case-card .case-body p { color: var(--text-sec); }
+.case-card .case-body strong { color: var(--text-main); }
