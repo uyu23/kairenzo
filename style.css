@@ -466,3 +466,38 @@ button { font-family: inherit; }
   .growth-word,.growth-word::after,.signature-headline::after{animation:none!important}
   .growth-word::after{transform:scaleX(1)}
 }
+
+/* Hero mobile polish + permanent subtitle visibility */
+.hero .subtitle,
+.hero p.subtitle {
+  opacity: 1;
+  visibility: visible;
+}
+
+.growth-word {
+  padding-left: .025em;
+  padding-right: .075em;
+  margin-right: -.025em;
+  overflow: visible;
+}
+
+.signature-headline {
+  padding-left: .08em;
+  padding-right: .08em;
+}
+
+@media (max-width: 640px) {
+  .signature-headline {
+    width: 100%;
+    padding-inline: .12em;
+    line-height: 1.08;
+  }
+  .hero-line {
+    width: 100%;
+    text-align: center;
+  }
+  .growth-word {
+    padding-left: .035em;
+    padding-right: .09em;
+  }
+}

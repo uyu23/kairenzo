@@ -209,17 +209,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Signature hero entrance
+// Signature hero entrance — headline only.
+// Subtitle and CTA are intentionally excluded so they cannot get stuck at opacity: 0.
 document.addEventListener('DOMContentLoaded', () => {
-  const line1=document.querySelector('.hero-line-1');
-  const line2=document.querySelector('.hero-line-2');
-  const attention=document.querySelector('.attention-word');
-  if(window.gsap && line1 && line2){
-    const tl=gsap.timeline({defaults:{ease:'power3.out'}});
-    tl.from(line1,{y:34,opacity:0,filter:'blur(10px)',duration:.85})
-      .from(attention,{opacity:0,filter:'blur(14px)',scale:.96,duration:.65},'-=.48')
-      .from(line2,{y:30,opacity:0,filter:'blur(9px)',duration:.8},'-=.35')
-      .from('.hero .subtitle',{y:18,opacity:0,duration:.6},'-=.3')
-      .from('.hero .hero-actions, .hero .cta-group',{y:14,opacity:0,duration:.55},'-=.35');
+  const line1 = document.querySelector('.hero-line-1');
+  const line2 = document.querySelector('.hero-line-2');
+  const attention = document.querySelector('.attention-word');
+  const subtitle = document.querySelector('.hero .subtitle, .hero p.subtitle');
+
+  // Defensive reset: subtitle must remain visible after all entrance animations.
+  if (subtitle) {
+    subtitle.style.opacity = '1';
+    subtitle.style.visibility = 'visible';
+    subtitle.style.transform = 'none';
+    subtitle.style.filter = 'none';
   }
+
+  if (window.gsap && line1 && line2) {
+    gsap.set([line1, line2], { opacity: 1 });
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl.from(line1, {
+      y: 32, opacity: 0, filter: 'blur(10px)', duration: .82, clearProps: 'filter,transform'
+    })
+    .from(attention, {
+      opacity: 0, filter: 'blur(12px)', scale: .97, duration: .58, clearProps: 'filter,transform'
+    }, '-=.44')
+    .from(line2, {
+      y: 28, opacity: 0, filter: 'blur(9px)', duration: .76, clearProps: 'filter,transform'
+    }, '-=.30');
+  }
+
+  // Final safety reset after any older page-load timelines have completed.
+  setTimeout(() => {
+    if (subtitle) {
+      subtitle.style.opacity = '1';
+      subtitle.style.visibility = 'visible';
+      subtitle.style.transform = 'none';
+      subtitle.style.filter = 'none';
+    }
+  }, 2200);
 });
