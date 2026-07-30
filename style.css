@@ -365,3 +365,21 @@ button { font-family: inherit; }
   .brand-logo img { width:36px; height:36px; }
   .direct-contact-links { flex-direction:column; align-items:center; }
 }
+
+/* Final Kairenzo brand polish */
+.brand-logo { display:inline-flex; align-items:center; gap:.7rem; text-decoration:none; }
+.brand-logo img {
+  width:40px; height:40px; border-radius:50%; object-fit:cover;
+  box-shadow:0 8px 24px rgba(0,113,227,.16);
+}
+.footer-brand-logo img { width:44px; height:44px; }
+.hero-k-mark {
+  display:grid; place-items:center;
+  width:1em; height:1em;
+  font-size:clamp(3rem,8vw,6rem);
+  font-weight:800; letter-spacing:-.08em;
+  color:var(--blue);
+}
+@media (max-width:520px) {
+  .brand-logo img { width:36px; height:36px; }
+}
