@@ -1,6 +1,0 @@
-{
-  "name": "Kairenzo",
-  "description": "Premium AI agency website",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
