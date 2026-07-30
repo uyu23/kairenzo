@@ -349,3 +349,19 @@ button { font-family: inherit; }
 .linkedin-link:hover { color: var(--blue); }
 .case-card .case-body p { color: var(--text-sec); }
 .case-card .case-body strong { color: var(--text-main); }
+
+/* Kairenzo brand identity */
+.brand-logo { display:inline-flex; align-items:center; gap:.65rem; }
+.brand-logo img { width:38px; height:38px; object-fit:cover; border-radius:50%; box-shadow:0 6px 20px rgba(0,113,227,.18); }
+.brand-logo span { font-weight:700; letter-spacing:-.02em; }
+.direct-contact { margin-top:2rem; text-align:center; }
+.direct-contact-label { color:var(--text-sec); margin-bottom:.75rem; }
+.direct-contact-links,.footer-socials { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+.direct-contact-links a,.footer-socials a { color:var(--text-main); font-weight:600; text-decoration:none; }
+.direct-contact-links a:hover,.footer-socials a:hover { color:var(--blue); }
+.footer-socials { margin:1.25rem auto 0; }
+@media (max-width:520px) {
+  .brand-logo span { display:none; }
+  .brand-logo img { width:36px; height:36px; }
+  .direct-contact-links { flex-direction:column; align-items:center; }
+}
