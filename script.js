@@ -167,3 +167,44 @@ forms.forEach(form => {
         }, 3000);
     });
 });
+
+// Kairenzo portfolio animations
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.count-target');
+  const animateCount = (el) => {
+    if (el.dataset.counted) return;
+    el.dataset.counted = 'true';
+    const target = Number(el.dataset.target || 40);
+    const start = performance.now();
+    const duration = 1200;
+    const tick = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + 'K+';
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) animateCount(entry.target);
+    });
+  }, { threshold: .45 });
+  counters.forEach(el => observer.observe(el));
+
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.from('.proof-card', {
+      scrollTrigger: { trigger: '.proof-metrics', start: 'top 82%' },
+      y: 34, opacity: 0, duration: .7, stagger: .13, ease: 'power2.out'
+    });
+    gsap.from('.founder-stagger', {
+      scrollTrigger: { trigger: '.founder-card', start: 'top 80%' },
+      y: 22, opacity: 0, duration: .65, stagger: .1, ease: 'power2.out'
+    });
+    gsap.from('.founder-tags span', {
+      scrollTrigger: { trigger: '.founder-tags', start: 'top 88%' },
+      y: 14, opacity: 0, duration: .45, stagger: .08, ease: 'power2.out'
+    });
+  }
+});
