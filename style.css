@@ -383,3 +383,13 @@ button { font-family: inherit; }
 @media (max-width:520px) {
   .brand-logo img { width:36px; height:36px; }
 }
+
+/* Kairenzo growth-system hero */
+.growth-flow-label {
+  margin: 1.4rem auto 0;
+  text-align: center;
+  color: var(--text-sec);
+  font-size: .92rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
