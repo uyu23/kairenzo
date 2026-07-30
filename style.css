@@ -430,3 +430,39 @@ button { font-family: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .proof-section::before,.founder-mark img { animation:none !important; }
 }
+
+/* Signature Kairenzo hero */
+.signature-headline{position:relative;display:flex;flex-direction:column;align-items:center;overflow:visible}
+.hero-line{display:block;will-change:transform,opacity,filter}
+.hero-focus{position:relative;display:inline-block}
+.attention-word{color:var(--text-main)}
+.growth-word{
+  color:var(--blue);
+  background:linear-gradient(100deg,var(--blue),#5aa9ff,var(--blue));
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:growthShimmer 4.5s ease-in-out 1.8s infinite
+}
+.growth-word::after{
+  content:"";position:absolute;left:0;right:0;bottom:.05em;height:.055em;border-radius:999px;
+  background:linear-gradient(90deg,transparent,var(--blue),transparent);
+  transform:scaleX(0);transform-origin:center;
+  animation:growthUnderline .75s cubic-bezier(.2,.8,.2,1) 1.25s forwards
+}
+.signature-headline::after{
+  content:"";position:absolute;width:46%;height:1px;left:27%;bottom:-.16em;
+  background:linear-gradient(90deg,transparent,rgba(0,113,227,.8),transparent);
+  opacity:0;transform:scaleX(.2);
+  animation:heroLightSweep 1.15s ease 1.45s forwards
+}
+@keyframes growthShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes growthUnderline{to{transform:scaleX(1)}}
+@keyframes heroLightSweep{
+  0%{opacity:0;transform:scaleX(.2) translateX(-12%)}
+  45%{opacity:.8}
+  100%{opacity:0;transform:scaleX(1.2) translateX(12%)}
+}
+@media(prefers-reduced-motion:reduce){
+  .growth-word,.growth-word::after,.signature-headline::after{animation:none!important}
+  .growth-word::after{transform:scaleX(1)}
+}

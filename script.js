@@ -208,3 +208,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Signature hero entrance
+document.addEventListener('DOMContentLoaded', () => {
+  const line1=document.querySelector('.hero-line-1');
+  const line2=document.querySelector('.hero-line-2');
+  const attention=document.querySelector('.attention-word');
+  if(window.gsap && line1 && line2){
+    const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+    tl.from(line1,{y:34,opacity:0,filter:'blur(10px)',duration:.85})
+      .from(attention,{opacity:0,filter:'blur(14px)',scale:.96,duration:.65},'-=.48')
+      .from(line2,{y:30,opacity:0,filter:'blur(9px)',duration:.8},'-=.35')
+      .from('.hero .subtitle',{y:18,opacity:0,duration:.6},'-=.3')
+      .from('.hero .hero-actions, .hero .cta-group',{y:14,opacity:0,duration:.55},'-=.35');
+  }
+});
