@@ -209,43 +209,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Signature hero entrance — headline only.
-// Subtitle and CTA are intentionally excluded so they cannot get stuck at opacity: 0.
+// Final hero entrance: independent elements, no reveal-up conflict.
 document.addEventListener('DOMContentLoaded', () => {
   const line1 = document.querySelector('.hero-line-1');
   const line2 = document.querySelector('.hero-line-2');
   const attention = document.querySelector('.attention-word');
-  const subtitle = document.querySelector('.hero .subtitle, .hero p.subtitle');
+  const subtitle = document.querySelector('.hero-permanent-subtitle');
 
-  // Defensive reset: subtitle must remain visible after all entrance animations.
+  // Start from explicit states controlled only by this timeline.
   if (subtitle) {
-    subtitle.style.opacity = '1';
+    subtitle.style.opacity = '0';
     subtitle.style.visibility = 'visible';
-    subtitle.style.transform = 'none';
+    subtitle.style.transform = 'translateY(16px)';
     subtitle.style.filter = 'none';
   }
 
   if (window.gsap && line1 && line2) {
-    gsap.set([line1, line2], { opacity: 1 });
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
     tl.from(line1, {
-      y: 32, opacity: 0, filter: 'blur(10px)', duration: .82, clearProps: 'filter,transform'
+      y: 32, opacity: 0, filter: 'blur(10px)', duration: .82,
+      clearProps: 'filter'
     })
     .from(attention, {
-      opacity: 0, filter: 'blur(12px)', scale: .97, duration: .58, clearProps: 'filter,transform'
+      opacity: 0, filter: 'blur(12px)', scale: .97, duration: .58,
+      clearProps: 'filter,transform'
     }, '-=.44')
     .from(line2, {
-      y: 28, opacity: 0, filter: 'blur(9px)', duration: .76, clearProps: 'filter,transform'
+      y: 28, opacity: 0, filter: 'blur(9px)', duration: .76,
+      clearProps: 'filter'
     }, '-=.30');
-  }
 
-  // Final safety reset after any older page-load timelines have completed.
-  setTimeout(() => {
     if (subtitle) {
-      subtitle.style.opacity = '1';
-      subtitle.style.visibility = 'visible';
-      subtitle.style.transform = 'none';
-      subtitle.style.filter = 'none';
+      tl.to(subtitle, {
+        opacity: 1, y: 0, duration: .62,
+        onStart: () => { subtitle.style.visibility = 'visible'; },
+        onComplete: () => {
+          subtitle.style.opacity = '1';
+          subtitle.style.visibility = 'visible';
+          subtitle.style.transform = 'none';
+        }
+      }, '-=.12');
     }
-  }, 2200);
+  } else if (subtitle) {
+    subtitle.style.opacity = '1';
+    subtitle.style.visibility = 'visible';
+    subtitle.style.transform = 'none';
+  }
 });
